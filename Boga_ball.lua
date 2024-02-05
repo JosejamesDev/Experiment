@@ -1,4 +1,3 @@
-
 local typeof = typeof
 
 local hookfunc = hookfunction
@@ -199,176 +198,159 @@ game:GetService("Players").LocalPlayer.PlayerScripts.Client.DeviceChecker:Destro
 
   print("anti cheat fucked and destroyed")
 
-  
 
 local CheckMobile = function()
-
-    if
-
-        game:GetService("UserInputService").TouchEnabled
-
-     then
-
-        return true 
-
-    end
-
-end 
-
-IsMobile = CheckMobile()
-
-local UserInputService = game:GetService("UserInputService")
-
-local RunService = game:GetService("RunService")
-
-local Players = game:GetService("Players")
-
-local LocalPlayer = Players.LocalPlayer
-
-
-
-local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+  
+      if
+  
+          game:GetService("UserInputService").TouchEnabled
+  
+       then
+  
+          return true 
+  
+      end
+  
+  end 
+  
+  IsMobile = CheckMobile()
+  
+  local UserInputService = game:GetService("UserInputService")
+  
+  local RunService = game:GetService("RunService")
+  
+  local Players = game:GetService("Players")
+  
+  local LocalPlayer = Players.LocalPlayer
+  
+  
+  
+  local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
   local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
   local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
   local GuiService = game:GetService("GuiService")
   
-
-
-local screenResolution = GuiService:GetScreenResolution()
-
-local screenWidth = screenResolution.X
-
-local screenHeight = screenResolution.Y
-
-
-
-local windowWidth = screenWidth * 0.6
-
-local windowHeight = screenHeight * 0.6
-
-
-
--- UDim2.fromOffset(500, 200),
-
-if not IsMobile then 
-
-    windowWidth,windowHeight = 500,200
-else
-
-    local ClickButton = Instance.new("ScreenGui")
-
-    local MainFrame = Instance.new("Frame")
-
-    local ImageLabel = Instance.new("ImageLabel")
-
-    local TextButton = Instance.new("TextButton") 
-
-    local UICorner = Instance.new("UICorner") 
-
-    local UICorner_2 = Instance.new("UICorner")
-
-    if game.CoreGui:FindFirstChild("ClickButton") then 
-
-        game.CoreGui:FindFirstChild("ClickButton"):Destroy()
-
-    end
-
-    ClickButton.Name = "ClickButton"
-
-    ClickButton.Parent = game.CoreGui
-
-    ClickButton.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-    
-
-    MainFrame.Name = "MainFrame"
-
-    MainFrame.Parent = ClickButton
-
-    MainFrame.Active = true
-
-    MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
-
-    MainFrame.BackgroundColor3 = Color3.new(1, 1, 1)
-
-    MainFrame.BorderColor3 = Color3.new(0, 0, 0)
-
-    MainFrame.BorderSizePixel = 0
-
-    MainFrame.Transparency = 1
-
-    MainFrame.Position = UDim2.new(0.187441245, 0, 0.476932675, 0)
-
-    MainFrame.Size = UDim2.new(0, 45, 0, 45)
-
-    
-
-    UICorner.CornerRadius = UDim.new(0, 100)
-
-    UICorner.Parent = MainFrame
-
-    
-
-    UICorner_2.CornerRadius = UDim.new(0, 100)
-
-    UICorner_2.Parent = ImageLabel
-
-    
-
-    ImageLabel.Parent = MainFrame
-
-    ImageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
-
-    ImageLabel.BackgroundColor3 = Color3.new(0, 0, 0)
-
-    ImageLabel.BorderColor3 = Color3.new(0, 0, 0)
-
-    ImageLabel.BorderSizePixel = 0
-
-    ImageLabel.Position = UDim2.new(0.48888889, 0, 0.48888889, 0)
-
-    ImageLabel.Size = UDim2.new(0, 45, 0, 45)
-
-    ImageLabel.Image = ""
-
-    
-
-    TextButton.Parent = MainFrame
-
-    TextButton.BackgroundColor3 = Color3.new(1, 1, 1)
-
-    TextButton.BackgroundTransparency = 1
-
-    TextButton.BorderColor3 = Color3.new(0, 0, 0)
-
-    TextButton.BorderSizePixel = 0
-
-    TextButton.Position = UDim2.new(3.3908421e-07, 0, 0, 0)
-
-    TextButton.Size = UDim2.new(0, 45, 0, 45)
-
-    TextButton.AutoButtonColor = false
-
-    TextButton.Font = Enum.Font.SourceSans
-
-    TextButton.Text = "teste"
-
-    TextButton.TextColor3 = Color3.new(255, 255, 255)
-
-    TextButton.TextSize = 15
-
-    TextButton.MouseButton1Click:Connect(function()
-
-        game:GetService("VirtualInputManager"):SendKeyEvent(true,"LeftControl",false,game)
-
-        game:GetService("VirtualInputManager"):SendKeyEvent(false,"LeftControl",false,game)
-
-    end)
-
-end  
-
-
-
+  
+  local GuiService = game:GetService("GuiService")
+  
+  
+  
+  local screenResolution = GuiService:GetScreenResolution()
+  
+  local screenWidth = screenResolution.X
+  
+  local screenHeight = screenResolution.Y
+  
+  
+  
+  local windowWidth = screenWidth * 0.6
+  
+  local windowHeight = screenHeight * 0.6
+  
+  
+  
+  -- UDim2.fromOffset(500, 200),
+  
+  if not IsMobile then 
+  
+      windowWidth,windowHeight = 500,200
+  else
+  
+      local ClickButton = Instance.new("ScreenGui")
+  
+      local MainFrame = Instance.new("Frame")
+  
+      local ImageLabel = Instance.new("ImageLabel")
+  
+      local TextButton = Instance.new("TextButton") 
+  
+      local UICorner = Instance.new("UICorner") 
+  
+      local UICorner_2 = Instance.new("UICorner")
+  
+      if game.CoreGui:FindFirstChild("ClickButton") then 
+  
+          game.CoreGui:FindFirstChild("ClickButton"):Destroy()
+  
+      end
+  
+      ClickButton.Name = "ClickButton"
+  
+      ClickButton.Parent = game.CoreGui
+  
+      ClickButton.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+  
+      
+  
+      MainFrame.Name = "MainFrame"
+  
+      MainFrame.Parent = ClickButton
+  
+      MainFrame.Active = true
+  
+      MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+  
+      MainFrame.BackgroundColor3 = Color3.new(1, 1, 1)
+  
+      MainFrame.BorderColor3 = Color3.new(0, 0, 0)
+  
+      MainFrame.BorderSizePixel = 0
+  
+      MainFrame.Transparency = 1
+  
+      MainFrame.Position = UDim2.new(0.187441245, 0, 0.476932675, 0)
+  
+      MainFrame.Size = UDim2.new(0, 45, 0, 45)
+  
+      
+  
+      UICorner.CornerRadius = UDim.new(0, 100)
+  
+      UICorner.Parent = MainFrame
+  
+      
+  
+      UICorner_2.CornerRadius = UDim.new(0, 100)
+  
+      UICorner_2.Parent = ImageLabel
+  
+      
+  
+      ImageLabel.Parent = MainFrame
+  
+      ImageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+  
+      ImageLabel.BackgroundColor3 = Color3.new(0, 0, 0)
+  
+      ImageLabel.BorderColor3 = Color3.new(0, 0, 0)
+  
+      ImageLabel.BorderSizePixel = 0
+  
+      ImageLabel.Position = UDim2.new(0.48888889, 0, 0.48888889, 0)
+  
+      ImageLabel.Size = UDim2.new(0, 45, 0, 45)
+  
+      ImageLabel.Image = "rbxassetid://16018982150"
+  
+      
+  
+  TextButton.Parent = MainFrame
+  TextButton.BackgroundColor3 = Color3.new(1, 1, 1)  -- Alteração aqui para a cor branca
+  TextButton.BackgroundTransparency = 1
+  TextButton.BorderColor3 = Color3.new(0, 0, 0)
+  TextButton.BorderSizePixel = 0
+  TextButton.Position = UDim2.new(3.3908421e-07, 0, 0, 0)
+  TextButton.Size = UDim2.new(0, 45, 0, 45)
+  TextButton.AutoButtonColor = false
+  TextButton.Font = Enum.Font.SourceSans
+  TextButton.Text = ""
+  TextButton.TextColor3 = Color3.new(255, 255, 255)
+  TextButton.TextSize = 15
+  TextButton.MouseButton1Click:Connect(function()
+      game:GetService("VirtualInputManager"):SendKeyEvent(true, "LeftControl", false, game)
+      game:GetService("VirtualInputManager"):SendKeyEvent(false, "LeftControl", false, game)
+  end)
+  end
   
   local Window = Fluent:CreateWindow({
       Title = "Heaven Hub",
@@ -1700,719 +1682,4 @@ Fluent:Notify({
     Content = "The script has been loaded.",
     Duration = 5
 })
-
-end titleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-titleLabel.TextSize = 14
-titleLabel.Parent = topBar
-
-local corner = Instance.new('UICorner')
-corner.CornerRadius = UDim.new(0, 10)
-corner.Parent = titleLabel
-
-local button = Instance.new('TextButton')
-button.Text = 'SPAM: OFF'
-button.Size = UDim2.new(1, -20, 0, 50)
-button.Position = UDim2.new(0, 10, 0, 50)
-button.BackgroundColor3 = Color3.fromRGB(0, 34 / 255, 102 / 255)
-button.BorderColor3 = Color3.fromRGB(30, 30, 30)
-button.BorderSizePixel = 2
-button.Font = Enum.Font.GothamSemibold
-button.TextColor3 = Color3.fromRGB(255, 255, 255)
-button.TextSize = 14
-button.Parent = frame
-
-local corner3 = Instance.new('UICorner')
-corner3.CornerRadius = UDim.new(0, 10)
-corner3.Parent = button
-
-local activated = false
-
-local function toggle()
-    activated = not activated
-    button.Text = activated and 'ON' or 'OFF'
-    button.BackgroundColor3 = activated and Color3.fromRGB(135, 206, 250) or Color3.fromRGB(0, 34 / 255, 102 / 255)
-
-    while activated do
-        local args = {
-            [1] = 1.5,
-            [2] = CFrame.new(-254.2939910888672, 112.13581848144531, -119.27256774902344) *
-                CFrame.Angles(-2.029526710510254, 0.5662040710449219, 2.314905881881714),
-            [3] = {
-                ['2617721424'] = Vector3.new(-273.400146484375, -724.8031005859375, -20.92414093017578),
-            },
-            [4] = {
-                [1] = 910,
-                [2] = 154,
-            },
-        }
-
-        game:GetService('ReplicatedStorage').Remotes.ParryAttempt:FireServer(unpack(args))
-        game:GetService('RunService').Heartbeat:Wait()
-    end
-end
-
-button.MouseButton1Click:Connect(toggle)
-local UserInputService = game:GetService("UserInputService")
-      local eKeyPressed = false
-      UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
-        if input.KeyCode == Enum.KeyCode.E and not gameProcessedEvent then
-          eKeyPressed = true
-          toggle()
-        end
-      end)
-      UserInputService.InputEnded:Connect(function(input, gameProcessedEvent)
-        if input.KeyCode == Enum.KeyCode.E then
-          eKeyPressed = false
-        end
-      end)
-     
    end
-})
-  
-Tabs.Combat:AddButton({
-    Title = "Spam Parry (PC)",
-    Description = "Spam = E",
-    Callback = function()
-        local activatedD = false
-
-        local function toggle()
-            activatedD = not activatedD
-            while activatedD do
-                local args = {
-                    [1] = 1.5,
-                    [2] = CFrame.new(-254.2939910888672, 112.13581848144531, -119.27256774902344) * CFrame.Angles(-2.029526710510254, 0.5662040710449219, 2.314905881881714),
-                    [3] = {
-                        ["2617721424"] = Vector3.new(-273.400146484375, -724.8031005859375, -20.92414093017578),
-                    },
-                    [4] = {
-                        [1] = 910,
-                        [2] = 154
-                    }
-                }
-                game:GetService("ReplicatedStorage").Remotes.ParryAttempt:FireServer(unpack(args))
-                game:GetService("RunService").Heartbeat:Wait()
-            end
-        end
-
-        local UserInputService = game:GetService("UserInputService")
-        local eKeyPressed = false
-
-        UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
-            if input.KeyCode == Enum.KeyCode.E and not gameProcessedEvent then
-                eKeyPressed = true
-                toggle()
-            end
-        end)
-
-        UserInputService.InputEnded:Connect(function(input)
-            if input.KeyCode == Enum.KeyCode.E then
-                eKeyPressed = false
-            end
-        end)
-    end
-})
-
-
-
-
-Tabs.ESP:AddButton({
-      Title = "Rgb player",
-      Description = "",
-      Callback = function()
-
-     loadstring(game:HttpGet("https://raw.githubusercontent.com/Xeno01010/Zeno-Hub/main/HightLighttasdfa"))()
-        end
-      
-})
-
-local ToggleParry = Tabs.ESP:AddToggle("ParryArea", {
-    Title = "Player Esp",
-    Default = false,
-    Callback = function(Value)
-      getgenv().ESP_plr = Value
-    ESP_plr()
-  end
-})
-      
-      local ToggleParry = Tabs.ESP:AddToggle("ParryArea", {
-    Title = "Ball Esp",
-    Default = false,
-    Callback = function(Value)
-      getgenv().ESP_Ball = Value
-    ESP_Ball()
-  end
-})
-
-
-
-local ToggleNight = Tabs.World:AddToggle("NightMode", {
-    Title = "Night & Day",
-    Default = false,
-    Callback = function(Value)
-        if Value then
-            nightMode()
-        else
-            day()
-        end
-    end
-})
-
-Tabs.World:AddButton({
-    Title = "Fps Boost",
-    Description = "",
-    Callback = function()
-        local ToDisable = {
-            Textures = true,
-            VisualEffects = true,
-            Parts = true,
-            Particles = true,
-            Sky = true
-        }
-
-        local ToEnable = {
-            FullBright = false
-        }
-
-        local Stuff = {}
-
-        local function disableTextures(obj)
-            if obj:IsA("Decal") or obj:IsA("Texture") then
-                obj.Texture = ""
-                table.insert(Stuff, obj)
-            end
-        end
-
-        local function disableParticlesAndEffects(obj)
-            if obj:IsA("ParticleEmitter") or obj:IsA("Smoke") or obj:IsA("Explosion") or obj:IsA("Sparkles") or obj:IsA("Fire") then
-                obj.Enabled = false
-                table.insert(Stuff, obj)
-            elseif obj:IsA("BloomEffect") or obj:IsA("BlurEffect") or obj:IsA("DepthOfFieldEffect") or obj:IsA("SunRaysEffect") then
-                obj.Enabled = false
-                table.insert(Stuff, obj)
-            end
-        end
-
-        local function disableObjects()
-            for _, v in pairs(game:GetDescendants()) do
-                if ToDisable.Parts and (v:IsA("Part") or v:IsA("Union") or v:IsA("BasePart")) then
-                    v.Material = Enum.Material.SmoothPlastic
-                    table.insert(Stuff, v)
-                end
-
-                if ToDisable.Particles then
-                    disableParticlesAndEffects(v)
-                end
-
-                if ToDisable.VisualEffects then
-                    disableParticlesAndEffects(v)
-                end
-
-                if ToDisable.Textures then
-                    disableTextures(v)
-                end
-
-                if ToDisable.Sky and v:IsA("Sky") then
-                    v.Parent = nil
-                    table.insert(Stuff, v)
-                end
-            end
-        end
-
-        local function enableFullBright()
-            if ToEnable.FullBright then
-                local Lighting = game:GetService("Lighting")
-                Lighting.FogColor = Color3.new(1, 1, 1)
-                Lighting.FogEnd = math.huge
-                Lighting.FogStart = math.huge
-                Lighting.Ambient = Color3.new(1, 1, 1)
-                Lighting.Brightness = 5
-                Lighting.ColorShift_Bottom = Color3.new(1, 1, 1)
-                Lighting.ColorShift_Top = Color3.new(1, 1, 1)
-                Lighting.OutdoorAmbient = Color3.new(1, 1, 1)
-                Lighting.Outlines = true
-            end
-        end
-
-        while wait(1) do
-            local success, error = pcall(function()
-                Stuff = {} -- Clear previous objects
-                disableObjects()
-                enableFullBright()
-                game:GetService("TestService"):Message("Effects Disabler Script: Successfully disabled " .. #Stuff .. " assets/effects. Settings:")
-                for i, v in pairs(ToDisable) do
-                    print(tostring(i) .. ": " .. tostring(v))
-                end
-            end)
-
-            if not success then
-                warn("Error in script:", error)
-            end
-        end
-    end
-})
-
-
-Tabs.World:AddButton({
-    Title = "Remove Texture",
-    Description = "",
-    Callback = function()
-        local ToDisable = {
-    Colors = true,
-    Textures = true,
-    VisualEffects = true,
-    Parts = true,
-    Particles = true,
-    Sky = true
-}
-
-local ToEnable = {
-    FullBright = false
-}
-
-local LastRunTime = 0
-local RunInterval = 5 -- Intervalo de 5 segundos entre as execuções
-
--- Function to disable colors
-local function disableColors(obj)
-    if obj:IsA("BasePart") then
-        obj.Color = Color3.new(0.5, 0.5, 0.5)
-    end
-end
-
--- Function to disable textures
-local function disableTextures(obj)
-    if obj:IsA("Decal") or obj:IsA("Texture") then
-        obj.Texture = ""
-    end
-end
-
--- Function to disable particles and visual effects
-local function disableParticlesAndEffects(obj)
-    if obj:IsA("ParticleEmitter") or obj:IsA("Smoke") or obj:IsA("Explosion") or obj:IsA("Sparkles") or obj:IsA("Fire") then
-        obj.Enabled = false
-    elseif obj:IsA("BloomEffect") or obj:IsA("BlurEffect") or obj:IsA("DepthOfFieldEffect") or obj:IsA("SunRaysEffect") then
-        obj.Enabled = false
-    end
-end
-
--- Function to apply changes to specific objects
-local function applyChangesToObject(obj)
-    if ToDisable.Parts and (obj:IsA("Part") or obj:IsA("Union") or obj:IsA("BasePart")) then
-        pcall(function()
-            obj.Material = Enum.Material.SmoothPlastic
-            if ToDisable.Colors then disableColors(obj) end
-        end)
-    end
-
-    if ToDisable.Particles or ToDisable.VisualEffects then
-        pcall(function()
-            disableParticlesAndEffects(obj)
-        end)
-    end
-
-    if ToDisable.Textures then
-        pcall(function()
-            disableTextures(obj)
-        end)
-    end
-
-    if ToDisable.Sky and obj:IsA("Sky") then
-        pcall(function()
-            obj:Destroy()
-        end)
-    end
-end
-
--- Function to apply changes to the entire map
-local function applyChangesToMap()
-    for _, obj in pairs(workspace:GetDescendants()) do
-        applyChangesToObject(obj)
-    end
-
-    print("Effects Disabler Script: Successfully applied changes.")
-end
-
--- Connect the function applyChangesToMap to the DescendantAdded event
-game:GetService("RunService").Stepped:Connect(function()
-    local currentTime = tick()
-    if not game:IsLoaded() or (currentTime - LastRunTime) < RunInterval then
-        return
-    end
-
-    applyChangesToMap()
-    LastRunTime = currentTime
-end)
-
--- Call the function initially to apply the changes to the current map
-applyChangesToMap()
-    end
-})
-
-
-Tabs.Shop:AddButton({
-    Title = "Buy Sword Box",
-    Description = "",
-    Callback = function()
-        local args = {
-            [1] = "PromptPurchaseCrate",
-            [2] = workspace.Spawn.Crates.NormalSwordCrate
-        }
-
-        game:GetService("ReplicatedStorage").Remote.RemoteFunction:InvokeServer(unpack(args))
-    end
-})
-
-Tabs.Shop:AddButton({
-    Title = "Buy Explosion Box",
-    Description = "",
-    Callback = function()
-local args = {
-    [1] = "PromptPurchaseCrate",
-    [2] = workspace.Spawn.Crates.NormalExplosionCrate
-}
-
-game:GetService("ReplicatedStorage").Remote.RemoteFunction:InvokeServer(unpack(args))
-  end
-})
-
-
-
-
-Tabs.Misc:AddButton({
-    Title = "Re-Enter",
-    Description = "",
-    Callback = function()
-        loadstring(game:HttpGet("https://pastebin.com/raw/mM7JBG5h", true))() 
-    end
-})
-
-Tabs.Misc:AddButton({
-
-        Title = "Mobile Keyboard",
-
-        Description = "",
-
-        Callback = function()
-
-            loadstring(game:HttpGet(
-
-                "https://gist.githubusercontent.com/RedZenXYZ/4d80bfd70ee27000660e4bfa7509c667/raw/da903c570249ab3c0c1a74f3467260972c3d87e6/KeyBoard%20From%20Ohio%20Fr%20Fr"))()
-
-        end
-
-    })
-
---interface
-SaveManager:SetLibrary(Fluent)
-InterfaceManager:SetLibrary(Fluent)
-
--- Ignore keys that are used by ThemeManager.
--- (we dont want configs to save themes, do we?)
-SaveManager:IgnoreThemeSettings()
-
--- You can add indexes of elements the save manager should ignore
-SaveManager:SetIgnoreIndexes({})
-
--- use case for doing it this way:
--- a script hub could have themes in a global folder
--- and game configs in a separate folder per game
-InterfaceManager:SetFolder("FluentScriptHub")
-SaveManager:SetFolder("FluentScriptHub/specific-game")
-
-InterfaceManager:BuildInterfaceSection(Tabs.Misc)
-
-
-Window:SelectTab(1)
-
-Fluent:Notify({
-    Title = "Heaven Hub",
-    Content = "The script has been loaded.",
-    Duration = 5
-})
-
-end             end
-        end
-
-        local UserInputService = game:GetService("UserInputService")
-        local eKeyPressed = false
-
-        UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
-            if input.KeyCode == Enum.KeyCode.E and not gameProcessedEvent then
-                eKeyPressed = true
-                toggle()
-            end
-        end)
-
-        UserInputService.InputEnded:Connect(function(input)
-            if input.KeyCode == Enum.KeyCode.E then
-                eKeyPressed = false
-            end
-        end)
-    end
-})
-
-
-
-
-Tabs.ESP:AddButton({
-      Title = "Rgb player",
-      Description = "",
-      Callback = function()
-
-     loadstring(game:HttpGet("https://raw.githubusercontent.com/Xeno01010/Zeno-Hub/main/HightLighttasdfa"))()
-        end
-      
-})
-
-local ToggleParry = Tabs.ESP:AddToggle("ParryArea", {
-    Title = "Player Esp",
-    Default = false,
-    Callback = function(Value)
-      getgenv().ESP_plr = Value
-    ESP_plr()
-  end
-})
-      
-      local ToggleParry = Tabs.ESP:AddToggle("ParryArea", {
-    Title = "Ball Esp",
-    Default = false,
-    Callback = function(Value)
-      getgenv().ESP_Ball = Value
-    ESP_Ball()
-  end
-})
-
-
-
-local ToggleNight = Tabs.World:AddToggle("NightMode", {
-    Title = "Night & Day",
-    Default = false,
-    Callback = function(Value)
-        if Value then
-            nightMode()
-        else
-            day()
-        end
-    end
-})
-
-Tabs.World:AddButton({
-    Title = "Fps Boost",
-    Description = "",
-    Callback = function()
-        local ToDisable = {
-            Textures = true,
-            VisualEffects = true,
-            Parts = true,
-            Particles = true,
-            Sky = true
-        }
-
-        local ToEnable = {
-            FullBright = false
-        }
-
-        local Stuff = {}
-
-        local function disableTextures(obj)
-            if obj:IsA("Decal") or obj:IsA("Texture") then
-                obj.Texture = ""
-                table.insert(Stuff, obj)
-            end
-        end
-
-        local function disableParticlesAndEffects(obj)
-            if obj:IsA("ParticleEmitter") or obj:IsA("Smoke") or obj:IsA("Explosion") or obj:IsA("Sparkles") or obj:IsA("Fire") then
-                obj.Enabled = false
-                table.insert(Stuff, obj)
-            elseif obj:IsA("BloomEffect") or obj:IsA("BlurEffect") or obj:IsA("DepthOfFieldEffect") or obj:IsA("SunRaysEffect") then
-                obj.Enabled = false
-                table.insert(Stuff, obj)
-            end
-        end
-
-        local function disableObjects()
-            for _, v in pairs(game:GetDescendants()) do
-                if ToDisable.Parts and (v:IsA("Part") or v:IsA("Union") or v:IsA("BasePart")) then
-                    v.Material = Enum.Material.SmoothPlastic
-                    table.insert(Stuff, v)
-                end
-
-                if ToDisable.Particles then
-                    disableParticlesAndEffects(v)
-                end
-
-                if ToDisable.VisualEffects then
-                    disableParticlesAndEffects(v)
-                end
-
-                if ToDisable.Textures then
-                    disableTextures(v)
-                end
-
-                if ToDisable.Sky and v:IsA("Sky") then
-                    v.Parent = nil
-                    table.insert(Stuff, v)
-                end
-            end
-        end
-
-        local function enableFullBright()
-            if ToEnable.FullBright then
-                local Lighting = game:GetService("Lighting")
-                Lighting.FogColor = Color3.new(1, 1, 1)
-                Lighting.FogEnd = math.huge
-                Lighting.FogStart = math.huge
-                Lighting.Ambient = Color3.new(1, 1, 1)
-                Lighting.Brightness = 5
-                Lighting.ColorShift_Bottom = Color3.new(1, 1, 1)
-                Lighting.ColorShift_Top = Color3.new(1, 1, 1)
-                Lighting.OutdoorAmbient = Color3.new(1, 1, 1)
-                Lighting.Outlines = true
-            end
-        end
-
-        while wait(1) do
-            local success, error = pcall(function()
-                Stuff = {} -- Clear previous objects
-                disableObjects()
-                enableFullBright()
-                game:GetService("TestService"):Message("Effects Disabler Script: Successfully disabled " .. #Stuff .. " assets/effects. Settings:")
-                for i, v in pairs(ToDisable) do
-                    print(tostring(i) .. ": " .. tostring(v))
-                end
-            end)
-
-            if not success then
-                warn("Error in script:", error)
-            end
-        end
-    end
-})
-
-
-Tabs.World:AddButton({
-    Title = "Remove Texture",
-    Description = "",
-    Callback = function()
-        local ToDisable = {
-    Colors = true,
-    Textures = true,
-    VisualEffects = true,
-    Parts = true,
-    Particles = true,
-    Sky = true
-}
-
-local ToEnable = {
-    FullBright = false
-}
-
-local LastRunTime = 0
-local RunInterval = 5 -- Intervalo de 5 segundos entre as execuções
-
--- Function to disable colors
-local function disableColors(obj)
-    if obj:IsA("BasePart") then
-        obj.Color = Color3.new(0.5, 0.5, 0.5)
-    end
-end
-
--- Function to disable textures
-local function disableTextures(obj)
-    if obj:IsA("Decal") or obj:IsA("Texture") then
-        obj.Texture = ""
-    end
-end
-
--- Function to disable particles and visual effects
-local function disableParticlesAndEffects(obj)
-    if obj:IsA("ParticleEmitter") or obj:IsA("Smoke") or obj:IsA("Explosion") or obj:IsA("Sparkles") or obj:IsA("Fire") then
-        obj.Enabled = false
-    elseif obj:IsA("BloomEffect") or obj:IsA("BlurEffect") or obj:IsA("DepthOfFieldEffect") or obj:IsA("SunRaysEffect") then
-        obj.Enabled = false
-    end
-end
-
--- Function to apply changes to specific objects
-local function applyChangesToObject(obj)
-    if ToDisable.Parts and (obj:IsA("Part") or obj:IsA("Union") or obj:IsA("BasePart")) then
-        pcall(function()
-            obj.Material = Enum.Material.SmoothPlastic
-            if ToDisable.Colors then disableColors(obj) end
-        end)
-    end
-
-    if ToDisable.Particles or ToDisable.VisualEffects then
-        pcall(function()
-            disableParticlesAndEffects(obj)
-        end)
-    end
-
-    if ToDisable.Textures then
-        pcall(function()
-            disableTextures(obj)
-        end)
-    end
-
-    if ToDisable.Sky and obj:IsA("Sky") then
-        pcall(function()
-            obj:Destroy()
-        end)
-    end
-end
-
--- Function to apply changes to the entire map
-local function applyChangesToMap()
-    for _, obj in pairs(workspace:GetDescendants()) do
-        applyChangesToObject(obj)
-    end
-
-    print("Effects Disabler Script: Successfully applied changes.")
-end
-
--- Connect the function applyChangesToMap to the DescendantAdded event
-game:GetService("RunService").Stepped:Connect(function()
-    local currentTime = tick()
-    if not game:IsLoaded() or (currentTime - LastRunTime) < RunInterval then
-        return
-    end
-
-    applyChangesToMap()
-    LastRunTime = currentTime
-end)
-
--- Call the function initially to apply the changes to the current map
-applyChangesToMap()
-    end
-})
-
-
-Tabs.Shop:AddButton({
-    Title = "Buy Sword Box",
-    Description = "",
-    Callback = function()
-        local args = {
-            [1] = "PromptPurchaseCrate",
-            [2] = workspace.Spawn.Crates.NormalSwordCrate
-        }
-
-        game:GetService("ReplicatedStorage").Remote.RemoteFunction:InvokeServer(unpack(args))
-    end
-})
-
-Tabs.Shop:AddButton({
-    Title = "Buy Explosion Box",
-    Description = "",
-    Callback = function()
-local args = {
-    [1] = "PromptPurchaseCrate",
-    [2] = workspace.Spawn.Crates.NormalExplosionCrate
-}
-
-game:GetService("ReplicatedStorage").Remote.RemoteFunction:InvokeServer(unpack(args))
-  end
-})
-
-
-end 
