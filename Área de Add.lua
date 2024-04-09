@@ -1216,9 +1216,7 @@ function ToggleVoidProtection(bool)
 end
 
 
-local TflingActive = false
-
-local function Tfling()
+function Tfling()
     task.spawn(function()
         local RVelocity = nil
         while TflingActive do
@@ -1233,15 +1231,15 @@ local function Tfling()
     end)
 end
 
-Misc:AddToggle("Touch", false, function(isEnabled)
-    if isEnabled then
+Misc:AddToggle("Touch", false, function(v)
+    TflingActive = v
+    if TflingActive then
         local fixpos = GetRoot(plr).Position
-        ToggleVoidProtection(true) -- Ativa a proteção contra vazio
-        TflingActive = true -- Ativa o efeito de "fling"
-        Tfling() -- Inicia o efeito de "fling"
-        TeleportTO(fixpos.X, fixpos.Y, fixpos.Z, "pos", "safe") -- Teleporta para a posição segura
+        ToggleVoidProtection(true)
+        TeleportTO(fixpos.X, fixpos.Y, fixpos.Z, "pos", "safe")
     else
-        TflingActive = false -- Desativa o efeito de "fling"
+        ToggleVoidProtection(false)
+    Tfling()
     end
 end)
 
